@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina web con video commentabile</title>
+</head>
+<body>
+
+  <form action="login.php" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+  </form>
+
+  <div id="contenuto">
+    <h1>Video commentabile</h1>
+
+    <form action="caricamento.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="video">
+      <input type="submit" value="Carica video">
+    </form>
+
+    <ul id="lista-video">
+      </ul>
+
+    <form action="commento.php" method="post">
+      <input type="hidden" name="id-video" id="id-video">
+      <input type="text" name="commento" placeholder="Commento">
+      <input type="submit" value="Invia">
+    </form>
+
+    <ul id="lista-commenti">
+      </ul>
+  </div>
+<video src="v.mp4" controls></video>
+</body>
+</html>
